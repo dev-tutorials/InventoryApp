@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/small_padding"
+    tools:context="com.example.hannabotar.inventoryapp.OrdersActivity">
+
+    <TextView
+        android:id="@+id/quantity_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_text_size"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/price_text"
+        android:paddingBottom="@dimen/small_padding"
+        tools:text="2 x Lenovo E540"/>
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/subtitle_text_size"
+        android:layout_below="@+id/quantity_name_text"
+        tools:text="01/05/2018"/>
+
+    <TextView
+        android:id="@+id/price_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_text_size"
+        android:layout_alignParentRight="true"
+        tools:text="1000$"
+        />
+
+</RelativeLayout>
