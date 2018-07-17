@@ -89,7 +89,7 @@ public class ItemEditorActivity extends AppCompatActivity implements LoaderManag
             setTitle(R.string.title_new_inventory_item);
 
             // Invalidate the options menu, so the "Delete" menu option can be hidden.
-            // (It doesn't make sense to delete a pet that hasn't been created yet.)
+            // (It doesn't make sense to delete an item that hasn't been created yet.)
             invalidateOptionsMenu();
         }
         
@@ -148,7 +148,7 @@ public class ItemEditorActivity extends AppCompatActivity implements LoaderManag
         builder.setNegativeButton(R.string.keep_editing, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked the "Keep editing" button, so dismiss the dialog
-                // and continue editing the pet.
+                // and continue editing the item.
                 if (dialog != null) {
                     dialog.dismiss();
                 }
@@ -190,14 +190,14 @@ public class ItemEditorActivity extends AppCompatActivity implements LoaderManag
         builder.setMessage(R.string.delete_dialog_msg);
         builder.setPositiveButton(R.string.delete, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                // User clicked the "Delete" button, so delete the pet.
+                // User clicked the "Delete" button, so delete the item.
                 deleteItem();
             }
         });
         builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked the "Cancel" button, so dismiss the dialog
-                // and continue editing the pet.
+                // and continue editing the item.
                 if (dialog != null) {
                     dialog.dismiss();
                 }
@@ -306,7 +306,7 @@ public class ItemEditorActivity extends AppCompatActivity implements LoaderManag
     }
 
     /**
-     * Perform the deletion of the pet in the database.
+     * Perform the deletion of the item in the database.
      */
     private void deleteItem() {
         if (mCurrentItemUri == null) {

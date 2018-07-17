@@ -17,9 +17,9 @@
     <!-- Label for dropdown menu option if the item is defect [CHAR LIMIT=20] -->
     <string name="condition_defect">Defect</string>
 
-    <!-- Label for editor menu option to save pet and leave editor [CHAR LIMIT=20] -->
+    <!-- Label for editor menu option to save item and leave editor [CHAR LIMIT=20] -->
     <string name="action_save">Save</string>
-    <!-- Label for editor overflow menu option that deletes the current pet [CHAR LIMIT=20] -->
+    <!-- Label for editor overflow menu option that deletes the current item [CHAR LIMIT=20] -->
     <string name="action_delete">Delete</string>
 
     <string name="errorSave">Error with saving item</string>
@@ -30,19 +30,19 @@
     <string name="successDelete">Item deleted</string>
 
     <!-- Title for the activity to add a new item [CHAR LIMIT=20] -->
-    <string name="title_new_inventory_item">Add a Pet</string>
+    <string name="title_new_inventory_item">Add an Item</string>
     <!-- Title for the activity to edit an item [CHAR LIMIT=20] -->
-    <string name="title_edit_inventory_item">Edit Pet</string>
+    <string name="title_edit_inventory_item">Edit Item</string>
 
     <!-- Dialog message when user is leaving editor but hasn't saved changes [CHAR LIMIT=NONE] -->
     <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
     <!-- Dialog button text for the option to discard a user's changes [CHAR LIMIT=20] -->
     <string name="discard">Discard</string>
-    <!-- Dialog button text for the option to keep editing the current pet [CHAR LIMIT=20] -->
+    <!-- Dialog button text for the option to keep editing the current item [CHAR LIMIT=20] -->
     <string name="keep_editing">Keep Editing</string>
 
     <!-- Dialog message to ask the user to confirm deleting the current item [CHAR LIMIT=NONE] -->
-    <string name="delete_dialog_msg">Delete this pet?</string>
+    <string name="delete_dialog_msg">Delete this item?</string>
     <!-- Dialog button text for the option to confirm deleting the current item [CHAR LIMIT=20] -->
     <string name="delete">Delete</string>
     <!-- Dialog button text for the option to cancel deletion of the current item [CHAR LIMIT=20] -->
