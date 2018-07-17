@@ -6,6 +6,7 @@ package com.example.hannabotar.inventoryapp.model;
 
 public class InventoryItem {
 
+    private Integer id;
     private String name;
     private String serialNo;
     private Integer condition;
@@ -16,6 +17,22 @@ public class InventoryItem {
         this.serialNo = serialNo;
         this.condition = condition;
         this.description = description;
+    }
+
+    public InventoryItem(Integer id, String name, String serialNo, Integer condition, String description) {
+        this.id = id;
+        this.name = name;
+        this.serialNo = serialNo;
+        this.condition = condition;
+        this.description = description;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {

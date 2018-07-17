@@ -13,12 +13,14 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/load_from_api"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="Load items"/>
 
         <Button
+            android:id="@+id/post_to_api"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
