@@ -3,4 +3,48 @@
     <string name="inventory_label">Inventory</string>
     <string name="order_history_label">Order history</string>
     <string name="supplier_products_label">Supplier products</string>
+    <string name="itemName">Name</string>
+    <string name="serial_no">Serial No</string>
+    <string name="condition">Condition</string>
+    <string name="description">Description</string>
+
+    <!-- Label for dropdown menu option if the item's condition is unknown [CHAR LIMIT=20] -->
+    <string name="condition_unknown">Unknown</string>
+    <!-- Label for dropdown menu option if the item is new [CHAR LIMIT=20] -->
+    <string name="condition_new">New</string>
+    <!-- Label for dropdown menu option if the item is used [CHAR LIMIT=20] -->
+    <string name="condition_used">Used</string>
+    <!-- Label for dropdown menu option if the item is defect [CHAR LIMIT=20] -->
+    <string name="condition_defect">Defect</string>
+
+    <!-- Label for editor menu option to save pet and leave editor [CHAR LIMIT=20] -->
+    <string name="action_save">Save</string>
+    <!-- Label for editor overflow menu option that deletes the current pet [CHAR LIMIT=20] -->
+    <string name="action_delete">Delete</string>
+
+    <string name="errorSave">Error with saving item</string>
+    <string name="successSave">Item with row id: %1$d</string>
+    <string name="errorUpdate">Error with updating item</string>
+    <string name="successUpdate">Item updated</string>
+    <string name="errorDelete">Error with deleting item</string>
+    <string name="successDelete">Item deleted</string>
+
+    <!-- Title for the activity to add a new item [CHAR LIMIT=20] -->
+    <string name="title_new_inventory_item">Add a Pet</string>
+    <!-- Title for the activity to edit an item [CHAR LIMIT=20] -->
+    <string name="title_edit_inventory_item">Edit Pet</string>
+
+    <!-- Dialog message when user is leaving editor but hasn't saved changes [CHAR LIMIT=NONE] -->
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+    <!-- Dialog button text for the option to discard a user's changes [CHAR LIMIT=20] -->
+    <string name="discard">Discard</string>
+    <!-- Dialog button text for the option to keep editing the current pet [CHAR LIMIT=20] -->
+    <string name="keep_editing">Keep Editing</string>
+
+    <!-- Dialog message to ask the user to confirm deleting the current item [CHAR LIMIT=NONE] -->
+    <string name="delete_dialog_msg">Delete this pet?</string>
+    <!-- Dialog button text for the option to confirm deleting the current item [CHAR LIMIT=20] -->
+    <string name="delete">Delete</string>
+    <!-- Dialog button text for the option to cancel deletion of the current item [CHAR LIMIT=20] -->
+    <string name="cancel">Cancel</string>
 </resources>
