@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="12dp"
+    android:padding="@dimen/medium_padding"
     tools:context="com.example.hannabotar.inventoryapp.MainActivity">
 
     <TextView
         android:id="@+id/inventory_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:textSize="@dimen/medium_text_size"
         android:textColor="@color/black"
         android:paddingBottom="@dimen/small_padding"
         android:text="@string/inventory_label" />
@@ -25,7 +25,7 @@
         android:id="@+id/order_history_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:textSize="@dimen/medium_text_size"
         android:textColor="@color/black"
         android:paddingTop="@dimen/small_padding"
         android:paddingBottom="@dimen/small_padding"
@@ -40,7 +40,7 @@
         android:id="@+id/supplier_products_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:textSize="@dimen/medium_text_size"
         android:textColor="@color/black"
         android:paddingTop="@dimen/small_padding"
         android:paddingBottom="@dimen/small_padding"
