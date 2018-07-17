@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -20,23 +21,12 @@ import android.widget.TextView;
 
 import com.example.hannabotar.inventoryapp.adapter.ItemCursorAdapter;
 import com.example.hannabotar.inventoryapp.data.ItemContract;
+import com.example.hannabotar.inventoryapp.services.GetItemsService;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class InventoryActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
-
-    /*private ImageView mImage;
-    private TextView mName;
-    private TextView mSerial;
-
-    mImage = (ImageView) findViewById(R.id.item_image);
-    mName = (TextView) findViewById(R.id.item_name);
-    mSerial = (TextView) findViewById(R.id.item_serial);
-
-        mImage.setImageResource(R.drawable.laptop);
-        mName.setText("Lenovo E540");
-        mSerial.setText("VGSHA45678XXXXXXX");*/
 
     private static final int DB_ITEM_LOADER_ID = 1;
 
@@ -48,6 +38,10 @@ public class InventoryActivity extends AppCompatActivity implements LoaderManage
 
     private ItemCursorAdapter mAdapter;
 
+    @BindView(R.id.load_from_api)
+    Button loadButton;
+    @BindView(R.id.post_to_api)
+    Button postButton;
     @BindView(R.id.list)
     ListView listView;
     @BindView(R.id.empty_view)
@@ -95,6 +89,24 @@ public class InventoryActivity extends AppCompatActivity implements LoaderManage
         // Prepare the loader. Either re-connect with an existing one,
         // or start a new one.
         getLoaderManager().initLoader(DB_ITEM_LOADER_ID, null, this);
+
+        setupButtons();
+    }
+
+    private void setupButtons() {
+        loadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startService(new Intent(InventoryActivity.this, GetItemsService.class));
+            }
+        });
+
+        postButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     // Called when a new Loader needs to be created
