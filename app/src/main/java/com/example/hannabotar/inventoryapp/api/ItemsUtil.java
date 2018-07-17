@@ -102,7 +102,6 @@ public class ItemsUtil {
             // Create the urlConnection
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
 
-
             urlConnection.setDoInput(true);
             urlConnection.setDoOutput(true);
 
@@ -179,7 +178,10 @@ public class ItemsUtil {
         List<InventoryItem> itemList = new ArrayList<>();
 
         try {
-            JSONArray results = new JSONArray(jsonResponse);
+            JSONObject root = new JSONObject(jsonResponse);
+            JSONArray results = root.getJSONArray("items");
+
+//            JSONArray results = new JSONArray(jsonResponse);
             for (int i = 0; i < results.length(); i++) {
                 JSONObject result = results.getJSONObject(i);
                 String itemName = result.getString("name");
