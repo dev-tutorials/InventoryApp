@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hannabotar.inventoryapp">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <application
         android:name=".App"
@@ -32,6 +33,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".InventoryActivity" />
         </activity>
+        <activity android:name=".ProductEditorActivity"></activity>
 
         <provider
             android:name=".data.ItemProvider"
@@ -43,7 +45,22 @@
             android:enabled="true"
             android:exported="false" />
 
-        <activity android:name=".ProductEditorActivity"></activity>
+        <service
+            android:name=".services.PullService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+
+        <receiver android:name=".receivers.StartServiceReceiver" android:enabled="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <!--For HTC devices-->
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>
