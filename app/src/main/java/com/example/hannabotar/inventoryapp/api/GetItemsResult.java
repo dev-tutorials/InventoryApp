@@ -10,13 +10,13 @@ import java.util.List;
 
 public class GetItemsResult {
 
-    private List<InventoryItem> inventoryItems;
+    private List<InventoryItem> items;
 
-    public List<InventoryItem> getInventoryItems() {
-        return inventoryItems;
+    public List<InventoryItem> getItems() {
+        return items;
     }
 
-    public void setInventoryItems(List<InventoryItem> inventoryItems) {
-        this.inventoryItems = inventoryItems;
+    public void setItems(List<InventoryItem> items) {
+        this.items = items;
     }
 }

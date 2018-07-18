@@ -29,7 +29,7 @@ public class GetItemsService extends IntentService {
         boolean success = false;
         try {
             GetItemsResult result = InventoryApiClient.getInventoryService().getItems();
-            if (result != null && result.getInventoryItems() != null) {
+            if (result != null && result.getItems() != null) {
 
                 InventoryDbHelper dbHelper = new InventoryDbHelper(getApplicationContext());
                 final SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -39,7 +39,7 @@ public class GetItemsService extends IntentService {
                     db.delete(ItemContract.ItemEntry.TABLE_NAME, null, null);
                     // reset AUTOINCREMENT
 //                    db.execSQL("delete from sqlite_sequence where name='" + ItemContract.ItemEntry.TABLE_NAME + "'");
-                    for (InventoryItem item: result.getInventoryItems()) {
+                    for (InventoryItem item: result.getItems()) {
                         ContentValues values = new ContentValues();
                         values.put(ItemContract.ItemEntry.COLUMN_NAME, item.getName());
                         values.put(ItemContract.ItemEntry.COLUMN_SERIAL_NO, item.getSerialNo());

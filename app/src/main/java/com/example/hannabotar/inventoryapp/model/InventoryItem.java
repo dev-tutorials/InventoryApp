@@ -7,13 +7,13 @@ package com.example.hannabotar.inventoryapp.model;
 public class InventoryItem {
 
     private String name;
-    private String serialNo;
+    private String serial_no;
     private Integer condition;
     private String description;
 
     public InventoryItem(String name, String serialNo, Integer condition, String description) {
         this.name = name;
-        this.serialNo = serialNo;
+        this.serial_no = serialNo;
         this.condition = condition;
         this.description = description;
     }
@@ -27,11 +27,11 @@ public class InventoryItem {
     }
 
     public String getSerialNo() {
-        return serialNo;
+        return serial_no;
     }
 
-    public void setSerialNo(String serialNo) {
-        this.serialNo = serialNo;
+    public void setSerialNo(String serial_no) {
+        this.serial_no = serial_no;
     }
 
     public Integer getCondition() {
