@@ -12,6 +12,8 @@ import com.example.hannabotar.inventoryapp.data.InventoryDbHelper;
 import com.example.hannabotar.inventoryapp.data.ItemContract;
 import com.example.hannabotar.inventoryapp.model.InventoryItem;
 
+import java.util.UUID;
+
 
 /**
  * Created by hanna on 7/18/2018.
@@ -41,7 +43,7 @@ public class GetItemsService extends IntentService {
 //                    db.execSQL("delete from sqlite_sequence where name='" + ItemContract.ItemEntry.TABLE_NAME + "'");
                     for (InventoryItem item: result.getItems()) {
                         ContentValues values = new ContentValues();
-                        values.put(ItemContract.ItemEntry.COLUMN_NAME, item.getName());
+                        values.put(ItemContract.ItemEntry.COLUMN_NAME, UUID.randomUUID().toString()); //generate a random name to view the interface update
                         values.put(ItemContract.ItemEntry.COLUMN_SERIAL_NO, item.getSerialNo());
                         values.put(ItemContract.ItemEntry.COLUMN_CONDITION, item.getCondition());
                         values.put(ItemContract.ItemEntry.COLUMN_DESCRIPTION, item.getDescription());
