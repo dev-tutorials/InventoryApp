@@ -11,7 +11,7 @@ public class PullService extends JobService {
     private static final String TAG = "PullService";
 
     @Override
-    public boolean onStartJob(JobParameters params) {
+    public  boolean onStartJob(JobParameters params) {
 
         System.out.println("Start job");
 

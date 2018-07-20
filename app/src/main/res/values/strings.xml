@@ -3,6 +3,7 @@
     <string name="inventory_label">Inventory</string>
     <string name="order_history_label">Order history</string>
     <string name="supplier_products_label">Supplier products</string>
+    <string name="editable_list_label">Editable list</string>
     <string name="itemName">Name</string>
     <string name="serial_no">Serial No</string>
     <string name="condition">Condition</string>
@@ -53,4 +54,15 @@
     <string name="title_edit_product">Edit product</string>
     <string name="title_new_product">Add product</string>
     <string name="delete_product_dialog_msg">Delete this product?</string>
+
+
+    <!--Preferences-->
+    <string name="settings_menu_item">Settings</string>
+    <string name="settings_title">List Settings</string>
+
+    <string name="settings_name_label" translatable="false">Name filter</string>
+    <string name="settings_name_key" translatable="false">name_filter</string>
+    <string name="settings_name_default" translatable="false"></string>
+
+
 </resources>

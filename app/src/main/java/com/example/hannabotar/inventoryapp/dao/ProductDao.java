@@ -26,7 +26,7 @@ public interface ProductDao {
     Product findByUid(int uid);
 
     @Insert
-    void insert(Product product);
+    Long insert(Product product);
 
     @Insert
     void insertAll(List<Product> products);

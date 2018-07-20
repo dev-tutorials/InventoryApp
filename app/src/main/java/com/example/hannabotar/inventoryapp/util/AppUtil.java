@@ -12,7 +12,7 @@ public class AppUtil {
         throw new ExceptionInInitializerError("Clasa utilitara");
     }
 
-    public static void scheduleJob(Context context) {
+    public static void  scheduleJob(Context context) {
         ComponentName serviceComponent = new ComponentName(context, PullService.class);
         JobInfo.Builder builder = new JobInfo.Builder(0, serviceComponent);
         builder.setMinimumLatency(1 * 3000); // wait at least

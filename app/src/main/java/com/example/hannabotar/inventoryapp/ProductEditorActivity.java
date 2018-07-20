@@ -205,7 +205,7 @@ public class ProductEditorActivity extends AppCompatActivity {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    App.get().getDB().productDao().insert(product);
+                    Long id = App.get().getDB().productDao().insert(product);
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {

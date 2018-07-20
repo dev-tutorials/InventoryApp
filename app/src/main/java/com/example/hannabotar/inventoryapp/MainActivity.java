@@ -6,6 +6,8 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,8 +26,10 @@ public class MainActivity extends AppCompatActivity {
     private TextView mInventoryLabel;
     private TextView mOrderHistoryLabel;
     private TextView mSupplierProductsLabel;
+    private TextView mEditableListLabel;
 
-
+    MediaPlayer mediaPlayer;
+    AudioManager audioManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         mInventoryLabel = (TextView) findViewById(R.id.inventory_label);
         mOrderHistoryLabel = (TextView) findViewById(R.id.order_history_label);
         mSupplierProductsLabel = (TextView) findViewById(R.id.supplier_products_label);
+        mEditableListLabel = (TextView) findViewById(R.id.editable_list);
 
 
 
@@ -63,10 +68,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        AppUtil.scheduleJob(this);
+        mEditableListLabel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.sound);
+                mediaPlayer.start();
 
+                /*Intent intent = new Intent(MainActivity.this, EditableListActivity.class);
+                startActivity(intent);*/
+            }
+        });
+
+        AppUtil.scheduleJob(this);
 
     }
 
-
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mediaPlayer.stop();
+    }
 }

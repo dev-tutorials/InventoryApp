@@ -37,16 +37,6 @@ public class ProductsActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        /*new Thread(new Runnable() {
-            @Override
-            public void run() {
-                List<Product> productList = App.get().getDB().productDao().getAll();
-                if (!productList.isEmpty()) {
-                    populateProducts(productList);
-                }
-            }
-        }).start();*/
-
         mAdapter = new ProductAdapter(this, new ArrayList<Product>());
 
         gridView.setAdapter(mAdapter);

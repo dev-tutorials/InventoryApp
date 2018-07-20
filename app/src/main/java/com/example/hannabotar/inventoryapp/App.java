@@ -5,6 +5,8 @@ import android.arch.persistence.room.Room;
 import android.content.SharedPreferences;
 
 import com.example.hannabotar.inventoryapp.database.InventoryDatabase;
+import com.example.hannabotar.inventoryapp.database.OrderDatabase;
+import com.example.hannabotar.inventoryapp.model.OrderDetails;
 
 /**
  * Created by gonzalo on 7/14/17
@@ -17,7 +19,12 @@ public class App extends Application {
     private static final String PREFERENCES = "RoomDemo.preferences";
     private static final String KEY_FORCE_UPDATE = "force_update";
 
+    private static final String ORDER_DATABASE_NAME = "OrderDatabase";
+
+
     private InventoryDatabase database;
+
+    private OrderDatabase orderDatabase;
 
     public static App get() {
         return INSTANCE;
@@ -32,11 +39,17 @@ public class App extends Application {
 //                .addMigrations(InventoryDatabase.MIGRATION_1_2)
                 .build();
 
+        orderDatabase = Room.databaseBuilder(getApplicationContext(), OrderDatabase.class, ORDER_DATABASE_NAME).build();
+
         INSTANCE = this;
     }
 
     public InventoryDatabase getDB() {
         return database;
+    }
+
+    public OrderDatabase getOrderDB() {
+        return orderDatabase;
     }
 
     public boolean isForceUpdate() {
